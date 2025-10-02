@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Search Events</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1 class="logo">City Charity Events</h1>
+        <p class="tagline">Find and support causes in your city</p>
+      </div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="search.html" class="nav-link active">Search Events</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page-grid">
+    <aside class="panel search-panel" aria-labelledby="filter-heading">
+      <h2 id="filter-heading" class="panel-title">Filter Events</h2>
+      <form id="search-form" class="filter-form" autocomplete="off">
+        <div class="field-row">
+          <label class="field-label" for="date">Date</label>
+          <input type="date" id="date" class="field-input">
+        </div>
+
+        <div class="field-row">
+          <label class="field-label" for="location">Location</label>
+          <input type="text" id="location" class="field-input" placeholder="City or venue">
+        </div>
+
+        <div class="field-row">
+          <label class="field-label" for="category">Category</label>
+          <select id="category" class="field-input">
+            <option value="">Any</option>
+          </select>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Search</button>
+          <button type="button" id="clear" class="btn ghost">Clear Filters</button>
+        </div>
+
+        <div class="small-note">
+          <p>Tip: You can combine filters. Leave all blank to list upcoming events.</p>
+        </div>
+      </form>
+    </aside>
+
+    <section class="results-area" aria-labelledby="results-heading">
+      <div class="results-header">
+        <h2 id="results-heading">Results</h2>
+        <div id="results-meta" class="results-meta">Showing latest events</div>
+      </div>
+
+      <div id="results" class="grid results-grid" aria-live="polite"></div>
+
+      <div id="no-results" class="no-results hidden">
+        <p>No matching events found. Try clearing filters or change search terms.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>City Charity Events • <a href="mailto:info@citycare.org">info@citycare.org</a></p>
+    </div>
+  </footer>
+
+  <script src="js/search.js"></script>
+</body>
+</html>
